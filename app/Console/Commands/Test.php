@@ -35,6 +35,7 @@ class Test extends Command
 
         $config = [
             'appName'     => 'Test',
+            'serviceName' => 'demo Service Name',
 //            'appVersion'  => '1.0.42',
             'serverUrl'   => 'http://10.0.4.227:8200',
 //            'hostname' => 'ip-10-0-2-188'
@@ -68,10 +69,11 @@ class Test extends Command
 
         $agent->stopTransaction($transaction->getTransactionName());
         dump('Transation stoped');
+        dump($agent);
 
         $test = $agent->send();
         dump('sended');
-
+        dump($test);
         $dbg = true;
     }
 }
