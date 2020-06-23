@@ -37,6 +37,8 @@ class Test extends Command
             'appName'     => 'Test',
 //            'appVersion'  => '1.0.42',
             'serverUrl'   => 'http://10.0.4.227:8200',
+//            'hostname' => 'ip-10-0-2-188'
+//            'apmVersion' => '',
 //            'secretToken' => 'DKKbdsupZWEEzYd4LX34TyHF36vDKRJP',
 //            'hostname'    => 'node-24.app.network.com',
 //            'env'         => ['DOCUMENT_ROOT', 'REMOTE_ADDR', 'REMOTE_USER'],
@@ -53,7 +55,7 @@ class Test extends Command
 
         dump(((bool)$agent) ? 'Agent created' : 'Agent didn t create');
 
-        $transaction = $agent->startTransaction('Failing-Transaction');
+        $transaction = $agent->startTransaction('Test Transaction');
 
         dump(((bool)$transaction) ? 'Transact ceated' : 'Transact dedn t ceate');
 
@@ -61,6 +63,7 @@ class Test extends Command
             throw new \Exception('Test Exception');
         } catch (\Exception $exception) {
             $agent->captureThrowable($exception);
+            $debug = true;
         }
 
         $agent->stopTransaction($transaction->getTransactionName());
