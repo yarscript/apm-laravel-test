@@ -51,7 +51,11 @@ class Test extends Command
 //        Config::all();
         $agent = new \PhilKra\Agent($config);
 
+        dump(((bool)$agent) ? 'Agent created' : 'Agent didn t create');
+
         $transaction = $agent->startTransaction('Failing-Transaction');
+
+        dump(((bool)$transaction) ? 'Transact ceated' : 'Transact dedn t ceate');
 
         try {
             throw new \Exception('Test Exception');
@@ -60,7 +64,11 @@ class Test extends Command
         }
 
         $agent->stopTransaction($transaction->getTransactionName());
+        dump('Transation stoped');
+
         $test = $agent->send();
+        dump('sended');
+
         $dbg = true;
     }
 }
