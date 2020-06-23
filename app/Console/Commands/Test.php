@@ -36,8 +36,9 @@ class Test extends Command
         $config = [
             'appName'     => 'Test',
             'serviceName' => 'demo Service Name',
-//            'appVersion'  => '1.0.42',
+            'appVersion'  => '5.8.2',
             'serverUrl'   => 'http://10.0.4.227:8200',
+//            'apmVersion' => '',
 //            'hostname' => 'ip-10-0-2-188'
 //            'apmVersion' => '',
 //            'secretToken' => 'DKKbdsupZWEEzYd4LX34TyHF36vDKRJP',
