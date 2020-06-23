@@ -38,11 +38,12 @@ class Test extends Command
             'serviceName' => 'demo Service Name',
             'appVersion'  => '5.8.2',
             'serverUrl'   => 'http://10.0.4.227:8200',
+            'apmVersion' => '7.7.1',
 //            'apmVersion' => '',
 //            'hostname' => 'ip-10-0-2-188'
 //            'apmVersion' => '',
 //            'secretToken' => 'DKKbdsupZWEEzYd4LX34TyHF36vDKRJP',
-//            'hostname'    => 'node-24.app.network.com',
+            'hostname'    => 'APM-Server-Elastic',
 //            'env'         => ['DOCUMENT_ROOT', 'REMOTE_ADDR', 'REMOTE_USER'],
 //            'cookies'     => ['my-cookie'],
 //            'httpClient'  => [
