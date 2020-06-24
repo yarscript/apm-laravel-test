@@ -35,14 +35,14 @@ class Test extends Command
 
         $config = [
             'appName'     => 'Test-apm',
-            'appVersion'  => '',
+//            'appVersion'  => '',
             'serverUrl'   => 'http://10.0.4.227:8200',
 //            'apmVersion' => '7.7.1',
 //            'apmVersion' => '',
 //            'hostname' => 'ip-10-0-2-188'
 //            'apmVersion' => '',
 //            'secretToken' => 'DKKbdsupZWEEzYd4LX34TyHF36vDKRJP',
-            'hostname'    => 'stage-php',
+//            'hostname'    => 'stage-php',
 //            'env'         => ['DOCUMENT_ROOT', 'REMOTE_ADDR', 'REMOTE_USER'],
 //            'cookies'     => ['my-cookie'],
 //            'httpClient'  => [
@@ -57,9 +57,9 @@ class Test extends Command
 
         dump(((bool)$agent) ? 'Agent created' : 'Agent didn t create');
 
-        $transaction = $agent->startTransaction('Test Transaction');
+//        $transaction = $agent->startTransaction('TestTransaction');
 
-        dump(((bool)$transaction) ? 'Transact ceated' : 'Transact dedn t ceate');
+//        dump(((bool)$transaction) ? 'Transact ceated' : 'Transact dedn t ceate');
 
         try {
             throw new \Exception('Test Exception');
@@ -68,7 +68,7 @@ class Test extends Command
             $debug = true;
         }
 
-        $agent->stopTransaction($transaction->getTransactionName());
+//        $agent->stopTransaction($transaction->getTransactionName());
         dump('Transation stoped');
         dump($agent);
 
