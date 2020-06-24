@@ -37,6 +37,7 @@ class Test extends Command
             'appName'     => 'Test-apm',
 //            'appVersion'  => '',
             'serverUrl'   => 'http://10.0.4.227:8200',
+            'serviceName' => 'testt'
 //            'apmVersion' => '7.7.1',
 //            'apmVersion' => '',
 //            'hostname' => 'ip-10-0-2-188'
