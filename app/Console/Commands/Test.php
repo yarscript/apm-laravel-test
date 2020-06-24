@@ -35,7 +35,7 @@ class Test extends Command
 
         $config = [
             'appName'     => 'Test-apm',
-//            'appVersion'  => '',
+            'appVersion'  => '7.0.0',
             'serverUrl'   => 'http://10.0.4.227:8200',
             'serviceName' => 'testt'
 //            'apmVersion' => '7.7.1',
