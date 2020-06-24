@@ -70,7 +70,7 @@ class Test extends Command
 
 //        $agent->stopTransaction($transaction->getTransactionName());
         dump('Transation stoped');
-        dump($agent);
+//        dump($agent);
 
         $test = $agent->send();
         dump('sended');
