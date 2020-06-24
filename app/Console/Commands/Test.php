@@ -58,7 +58,7 @@ class Test extends Command
 
         dump(((bool)$agent) ? 'Agent created' : 'Agent didn t create');
 
-//        $transaction = $agent->startTransaction('TestTransaction');
+        $transaction = $agent->startTransaction('TestTransaction');
 
 //        dump(((bool)$transaction) ? 'Transact ceated' : 'Transact dedn t ceate');
 
@@ -69,7 +69,7 @@ class Test extends Command
             $debug = true;
         }
 
-//        $agent->stopTransaction($transaction->getTransactionName());
+        $agent->stopTransaction($transaction->getTransactionName());
         dump('Transation stoped');
 //        dump($agent);
 
